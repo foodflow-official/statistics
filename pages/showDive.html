@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Div on Button Press</title>
+  <style>
+    #hiddenDiv {
+      display: none; /* Initially hidden */
+      padding: 20px;
+      background-color: #00ff9d; /* Matches your preferred heading color */
+      color: #fff;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="showButton">Show Content</button>
+  <div id="hiddenDiv">
+    This is the content that was hidden.
+  </div>
+
+  <script>
+    // JavaScript to handle the button click
+    document.getElementById('showButton').addEventListener('click', function() {
+      const hiddenDiv = document.getElementById('hiddenDiv');
+      hiddenDiv.style.display = 'block'; // Make the div visible
+    });
+  </script>
+</body>
+</html>

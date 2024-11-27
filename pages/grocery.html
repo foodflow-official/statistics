@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Storage
+    Grocery List
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
@@ -55,7 +55,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active bg-gradient-dark text-white" href="../pages/tables.html">
+          <a class="nav-link text-dark" href="../pages/tables.html">
             <i class="material-symbols-rounded opacity-5">table_view</i>
             <span class="nav-link-text ms-1">Storage</span>
           </a>
@@ -67,7 +67,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="../pages/grocery.html">
+          <a class="nav-link active bg-gradient-dark text-white" href="../pages/grocery.html">
             <i class="material-symbols-rounded opacity-5">grocery</i>
             <span class="nav-link-text ms-1">Grocery List</span>
           </a>
@@ -101,16 +101,11 @@
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            
-            <li class="breadcrumb-item text-lg mt-2 text-dark active" aria-current="page">Storage</li>
+            <li class="breadcrumb-item text-lg mt-2 text-dark active" aria-current="page">Grocery List</li>
           </ol>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-            <div class="input-group input-group-outline">
-              <label class="form-label">Type here...</label>
-              <input type="text" class="form-control">
-            </div>
           </div>
           <ul class="navbar-nav d-flex align-items-center  justify-content-end">
 
@@ -143,24 +138,31 @@
     <div class="container-fluid py-2">
       <div class="row">
         <div class="col-12">
-          <div class="card my-4">
+          <div class="my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-              <div style="display: flex; justify-content: space-between" class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Ingredients</h6>
-                <a style="padding-right: 20px;" href="javascript:;" class="material-symbols-rounded plus text-gradient">add</a>
-                <!-- <div style="padding-right: 20px;" class="text-white text-capitalize ps-3">Storage</div> -->
+              <div style="display: flex;" class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3">
+                <img src="../img/gpticon.webp" style="margin-left: 40px; margin-top: 15px;" class="avatar avatar-sm me-3 border-radius-lg" alt="icon">
+                <button id="showButton" class="btn btn-outline-light mt-3 w-100 font-weight-bolder text-sm" type="button">Generate</button>
+                <div style="padding-right: 20px;" class="text-white text-capitalize ps-3"></div>
               </div>
             </div>
-            <div class="card-body px-0 pb-2">
+            <script>
+              // JavaScript to handle the button click
+              document.getElementById('showButton').addEventListener('click', function() {
+                const hiddenDiv = document.getElementById('hiddenDiv');
+                hiddenDiv.style.display = 'block'; // Make the div visible
+              });
+            </script>
+            <div id="hiddenDiv" class="card-body px-0 pb-2">
               <div class="table-responsive p-0">
                 <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Item</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Quantity</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Expire Date</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"></th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"></th>
                       <th class="text-secondary opacity-7"></th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Quantity</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -175,19 +177,16 @@
                           </div>
                         </div>
                       </td>
-                      <td>
-                        <span class="text-secondary text-xs font-weight-bold">3 Kg</span>
-                      </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Fresh</span>
+                        <span class="badge badge-sm bg-gradient-success"></span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">23/12/2024</span>
+                        <span class="text-secondary text-xs font-weight-bold"></span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
+                      </td>
+                      <td>
+                        <span class="text-secondary text-xs font-weight-bold">3 Kg</span>
                       </td>
                     </tr>
                     <tr>
@@ -201,19 +200,16 @@
                           </div>
                         </div>
                       </td>
-                      <td>
-                        <span class="text-secondary text-xs font-weight-bold">30 Pcs</span>
-                      </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Fresh</span>
+                        <span class="badge badge-sm bg-gradient-success"></span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">15/12/2024</span>
+                        <span class="text-secondary text-xs font-weight-bold"></span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
+                      </td>
+                      <td>
+                        <span class="text-secondary text-xs font-weight-bold">30 Pcs</span>
                       </td>
                     </tr>
                     <tr>
@@ -227,19 +223,17 @@
                           </div>
                         </div>
                       </td>
-                      <td>
-                        <span class="text-secondary text-xs font-weight-bold">10 Kg</span>
-                      </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Fresh</span>
+                        <span class="badge badge-sm bg-gradient-success"></span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">07/12/2024</span>
+                        <span class="text-secondary text-xs font-weight-bold"></span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
+
+                      </td>
+                      <td>
+                        <span class="text-secondary text-xs font-weight-bold">10 Kg</span>
                       </td>
                     </tr>
                     <tr>
@@ -253,19 +247,17 @@
                           </div>
                         </div>
                       </td>
-                      <td>
-                        <span class="text-secondary text-xs font-weight-bold">2 Kg</span>
-                      </td>
+                      
                       <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-secondary">Expiring</span>
+                        <span class="badge badge-sm bg-gradient-secondary"></span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">02/12/2024</span>
+                        <span class="text-secondary text-xs font-weight-bold"></span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
+                      </td>
+                      <td>
+                        <span class="text-secondary text-xs font-weight-bold">2 Kg</span>
                       </td>
                     </tr>
                     <tr>
@@ -279,19 +271,16 @@
                           </div>
                         </div>
                       </td>
-                      <td>
-                        <span class="text-secondary text-xs font-weight-bold">7 Kg</span>
-                      </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-secondary">Expiring</span>
+                        <span class="badge badge-sm bg-gradient-secondary"></span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">02/12/2024</span>
+                        <span class="text-secondary text-xs font-weight-bold"></span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
+                      </td>
+                      <td>
+                        <span class="text-secondary text-xs font-weight-bold">7 Kg</span>
                       </td>
                     </tr>
                     <tr>
@@ -305,19 +294,16 @@
                           </div>
                         </div>
                       </td>
-                      <td>
-                        <span class="text-secondary text-xs font-weight-bold">10 Kg</span>
-                      </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-secondary">Expiring</span>
+                        <span class="badge badge-sm bg-gradient-secondary"></span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">04/12/2024</span>
+                        <span class="text-secondary text-xs font-weight-bold"></span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
+                      </td>
+                      <td>
+                        <span class="text-secondary text-xs font-weight-bold">10 Kg</span>
                       </td>
                     </tr>
                     <tr>
@@ -331,19 +317,16 @@
                           </div>
                         </div>
                       </td>
-                      <td>
-                        <span class="text-secondary text-xs font-weight-bold">12 Kg</span>
-                      </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Fresh</span>
+                        <span class="badge badge-sm bg-gradient-success"></span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">10/12/2024</span>
+                        <span class="text-secondary text-xs font-weight-bold"></span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
+                      </td>
+                      <td>
+                        <span class="text-secondary text-xs font-weight-bold">12 Kg</span>
                       </td>
                     </tr>
                     <tr>
@@ -357,19 +340,16 @@
                           </div>
                         </div>
                       </td>
-                      <td>
-                        <span class="text-secondary text-xs font-weight-bold">15 Kg</span>
-                      </td>
                       <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Fresh</span>
+                        <span class="badge badge-sm bg-gradient-success"></span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">30/04/2025</span>
+                        <span class="text-secondary text-xs font-weight-bold"></span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
+                      </td>
+                      <td>
+                        <span class="text-secondary text-xs font-weight-bold">15 Kg</span>
                       </td>
                     </tr>
                   </tbody>
@@ -379,6 +359,7 @@
           </div>
         </div>
       </div>
+  
     </div>
   </main>
   <div class="fixed-plugin">

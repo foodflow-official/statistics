@@ -277,6 +277,10 @@ h3,
   }
 }
 
+#hiddenDiv {
+  display: none;
+}
+
 h4,
 .h4 {
   font-size: calc(1.275rem + 0.3vw);
